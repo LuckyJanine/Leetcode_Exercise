@@ -34,4 +34,23 @@ public class twoptr {
         }
         return maxNumberOfOnes;
     }
+    
+    // sum with two numbers
+    // input: an array of integers
+    // feedback: cannot see leetcode test inputs, what should it return when there isn't such a sum
+    public int[] twoSum (int[] nums, int target) {
+        int[] op = new int[2];
+        int len = nums.length;
+        for(int i = 0; i < len; i++){
+            int temp = target - nums[i];
+            for(int j = i +1; j < len; j++){
+                if(nums[j] != temp){
+                    continue;
+                }
+                op[0] = i;
+                op[1] = j;
+            }
+        }
+        return op;
+    }
 }
