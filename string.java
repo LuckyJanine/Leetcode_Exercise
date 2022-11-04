@@ -1,7 +1,7 @@
 package Array_String;
 
 public class string {
-    // 58 - length of the last word
+    // 58 - length of last word
     public int lengthOfLastWord(String s) {
         int len = s.length();
         int lenOfLastWord = 0;
