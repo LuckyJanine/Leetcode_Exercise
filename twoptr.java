@@ -35,6 +35,26 @@ public class twoptr {
         return maxNumberOfOnes;
     }
     
+    // 35. Search Insert Position
+    // input: a sorted array
+    // complexity requirement: O(logn)
+    public int searchInsert(int[] nums, int target) {
+        int lptr = 0;
+        int rptr = nums.length -1;
+        int mid;
+        while (lptr <= rptr){
+            mid = lptr + (rptr - lptr)/2;
+            if(nums[mid] == target){
+                return mid;
+            } else if (nums[mid] < target){
+                lptr = mid +1;
+            } else{
+                rptr = mid -1;
+            }
+        }
+        return lptr;
+    }
+    
     // sum with two numbers
     // input: an array of integers
     // accepted but Qs: cannot see leetcode test inputs, what should it return when there isn't such a sum
