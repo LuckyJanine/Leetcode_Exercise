@@ -1,6 +1,18 @@
 package Array_String;
 
 public class array {
+    // 136. single number
+    // Given a non-empty array of integers nums, 
+    // every element appears twice except for one. Find that single one.
+    // XOR
+    public int singleNumber(int[] nums) {
+        int result = 0;
+        for(int i = 0; i < nums.length; i++){
+            result = result ^ nums[i];
+        }
+        return result;
+    }
+    
     // 169. majority element
     // input: an array of numbers which has the majority element
     // Moore's voting algorithm
